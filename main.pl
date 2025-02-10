@@ -66,11 +66,11 @@ our $path_folder;
 
 #--[global subroutines]-------------------------------------------------
 sub show_alert {
-    my ($title, $message) = @_;
+    my ($title, $message, $type) = @_;
     my $dialog = Gtk3::MessageDialog->new(
         $window,
         'modal',
-        'error',
+        "$type",
         'close',
         $message,
     );
@@ -146,25 +146,25 @@ $button_for_download->signal_connect(clicked => sub {
     my $current_format = $format_media->get_active_text();
 	
     if ($entry_url->get_text() eq '') {
-        show_alert("🐺 Mavirk", "Please, provide a valid URL!");
-    }
+        show_alert("🐺 Mavirk", "Please, provide a valid URL!", 'error');
+    },
     elsif (!-d $path_folder) {
-        show_alert("🐺 Mavirk", "The informed path is not a valid folder.");
+        show_alert("🐺 Mavirk", "The informed path is not a valid folder.", 'error');
     } else {
 		 if ($url =~ m/^https:\/\/www\.youtube\.com\/(watch\?v=[A-Za-z0-9_-]{11}|playlist\?list=[A-Za-z0-9_-]{34})$/ && $current_format eq 'mkv') {
 			 my $exit_status = system($command);			 
 			 if ($exit_status == 0) {
-				show_alert("Mavirk", "Your media was successfully installed!");
+				show_alert("Mavirk", "Your media was successfully installed!", 'info');
 			 }
 		 } elsif ($url =~ m/^https:\/\/www\.youtube\.com\/(watch\?v=[A-Za-z0-9_-]{11}|playlist\?list=[A-Za-z0-9_-]{34})$/ && $current_format eq 'flac') {
 			 $command = "yt-dlp -q -f bestaudio -x --audio-format flac --output \"$path_folder/%(title)s.%(ext)s\" $url";
 			 my $exit_status = system($command);
 			 
 			 if ($exit_status == 0) {
-				show_alert("Mavirk", "Your media was successfully installed!");
+				show_alert("Mavirk", "Your media was successfully installed!", 'info');
 			 }
 		} else {
-			show_alert("Mavirk", "Only YouTube URL's are supported at the moment");
+			show_alert("Mavirk", "Only YouTube URL's are supported at the moment", 'warning');
 		}
     }
 });
