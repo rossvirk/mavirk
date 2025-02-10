@@ -22,4 +22,4 @@ Always run the Mavirk inside the folder you downloaded to make everything happen
 
 
 ### Video demonstration
-[Marvirk Action](https://vimeo.com/1055059280?share=copy)
+[Mavirk Action](https://vimeo.com/1055059280?share=copy)
