@@ -100,7 +100,7 @@ $vbox_internal_layout_general->pack_start($label_how_to_use_mavirk, FALSE, FALSE
 
 #--[adding functionality to choose a predetermined folder]--------------
 my $file_chooser_button = Gtk3::FileChooserButton->new('', 'select-folder');
-$file_chooser_button->set_title("Mavirk | Select a folder");
+$file_chooser_button->set_title("🐺 Mavirk | Select a folder");
 
 $file_chooser_button->signal_connect(file_set => sub {
 	my ($file) =  @_;
@@ -146,10 +146,10 @@ $button_for_download->signal_connect(clicked => sub {
 	my $current_format = $format_media->get_active_text();
 	
     if ($entry_url->get_text() eq '') {
-        show_alert("Mavirk", "Please, provide a valid URL!");
+        show_alert("🐺 Mavirk", "Please, provide a valid URL!");
     }
     elsif (!-d $path_folder) {
-        show_alert("Mavirk", "The informed path is not a valid folder.");
+        show_alert("🐺 Mavirk", "The informed path is not a valid folder.");
     } else {
 		 if ($url =~ m/^https:\/\/www\.youtube\.com\/(watch\?v=[A-Za-z0-9_-]{11}|playlist\?list=[A-Za-z0-9_-]{34})$/ && $current_format eq 'mkv') {
 			 my $exit_status = system($command);			 
