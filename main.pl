@@ -1,6 +1,9 @@
 #!/usr/bin/perl
 
 use utf8;
+binmode(STDOUT, ":utf8");
+binmode(STDERR, ":utf8");
+
 use strict;
 use warnings;
 
