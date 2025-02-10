@@ -1,5 +1,5 @@
 # 🐺 Mavirk
-![Perl](https://img.shields.io/badge/perl-%2339457E.svg?style=for-the-badge&logo=perl&logoColor=white) ![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)
+![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white) ![Perl](https://img.shields.io/badge/perl-%2339457E.svg?style=for-the-badge&logo=perl&logoColor=white)
 
 Mavirk It's a graphical tool that helps you download videos and your favorite video and audio playlists, always getting the best results you are available. This project revolves around the YT-DLP project, so I can't guarantee that no failures occur, however, if something does not happen in the expected way you can notify me by opening a Issue.
 
