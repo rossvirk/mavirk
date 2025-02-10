@@ -154,14 +154,14 @@ $button_for_download->signal_connect(clicked => sub {
 		 if ($url =~ m/^https:\/\/www\.youtube\.com\/(watch\?v=[A-Za-z0-9_-]{11}|playlist\?list=[A-Za-z0-9_-]{34})$/ && $current_format eq 'mkv') {
 			 my $exit_status = system($command);			 
 			 if ($exit_status == 0) {
-				show_alert("Mavirk", "Your video was successfully installed!");
+				show_alert("Mavirk", "Your media was successfully installed!");
 			 }
 		 } elsif ($url =~ m/^https:\/\/www\.youtube\.com\/(watch\?v=[A-Za-z0-9_-]{11}|playlist\?list=[A-Za-z0-9_-]{34})$/ && $current_format eq 'flac') {
 			 $command = "yt-dlp -q -f bestaudio -x --audio-format flac --output \"$path_folder/%(title)s.%(ext)s\" $url";
 			 my $exit_status = system($command);
 			 
 			 if ($exit_status == 0) {
-				show_alert("Mavirk", "Your video was successfully installed!");
+				show_alert("Mavirk", "Your media was successfully installed!");
 			 }
 		} else {
 			show_alert("Mavirk", "Only YouTube URL's are supported at the moment");
