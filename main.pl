@@ -141,9 +141,9 @@ $box_for_entry_url_and_button_for_download->pack_start($button_for_download, FAL
 
 #--[setting functionality on entry and button]--------------------------
 $button_for_download->signal_connect(clicked => sub {
-	my $url =  $entry_url->get_text();
-	my $command = "yt-dlp -q -f bestvideo+bestaudio --merge-output-format mkv --output \"$path_folder/%(title)s.%(ext)s\" $url";
-	my $current_format = $format_media->get_active_text();
+    my $url =  $entry_url->get_text();
+    my $command = "yt-dlp -q -f bestvideo+bestaudio --merge-output-format mkv --output \"$path_folder/%(title)s.%(ext)s\" $url";
+    my $current_format = $format_media->get_active_text();
 	
     if ($entry_url->get_text() eq '') {
         show_alert("🐺 Mavirk", "Please, provide a valid URL!");
