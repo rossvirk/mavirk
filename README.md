@@ -20,6 +20,10 @@ After clicking downloading the process will start and you will only have to wait
 ### Important
 Always run the Mavirk inside the folder you downloaded to make everything happen the right way. One of the problems that can happen if you don't do it is that you can't open the program because of the icon (including a charm to the program, so please don't do it
 
+### Screenshot
+![Mavirk open](https://i.ibb.co/LDVfnmcR/mavirk-open.png)
+
+![Mavirk youtube only support](https://i.ibb.co/mVbmv8RV/mavirk-support-only-yt.png)
 
 ### Video demonstration
 [Mavirk Action](https://vimeo.com/1055059280?share=copy)
